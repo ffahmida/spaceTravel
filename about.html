@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+        body{
+            margin: 0;
+            background-color: #101720;
+            color: #fff;
+            font-family: oxanium,Helvetica, sans-serif;
+        }
+
+        .center{
+            width: 100%;
+            height: 40vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+        .title{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px;
+            font-size: 35px;
+             letter-spacing: 15px;
+        }
+    
+        
+        p{
+            width: 60%;
+            font-size: 18px;
+            display: block;
+            text-align: center;
+        }
+
+        .char{
+            font-size: 18px;
+            height: 40px;
+            animation: an 1s ease-out 1 both;
+            display: inline-block;
+        }
+   
+        .text{
+            display:block;
+            text-align: center;
+            margin: 0 auto;
+            font-size: 30px;
+            width: 60%;
+         
+           font-size: 30px;
+        }
+        @keyframes an{
+            from{
+                opacity: 0;
+                transform: perspective(500px) translate3d(-35px, -40px, -150px) rotate3d(1, -1, 0, 35deg);
+            }
+            to{
+                opacity: 1;
+                transform: perspective(500px) translate3d(0, 0, 0);
+            }
+        }
+
+
+
+        .spacex{
+    background-color: #080808;
+    display: flex;
+    justify-content: center;
+}
+
+
+.sx{
+    height: 150px;
+   
+   
+}
+
+footer{
+    background-color:#080808 ;
+}
+.footer{
+    width: 100%;
+    padding: 10px 30px 20px;
+}
+
+.footernav{
+    margin-top: 0;
+}
+.footernav ul{
+display: flex;
+justify-content: center;
+list-style: none;
+}
+.footernav ul li a{
+    color: #fff;
+    margin: 0px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+.footernav ul li a:hover{
+    color: #fff;
+    opacity: 0.5;
+}
+
+.footerbottom{
+    background-color: #101720;
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.footerbottom p{
+    color: #fff;
+    font-size: 10px;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+@media(max-width: 700px){
+  .footernav ul{
+    flex-direction: column;
+  }
+  .footernav ul li{
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+  }
+}
+
+section{
+height: 100vh;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="title">
+        <h1>
+           ABOUT US
+        </h1>
+    </div>
+    <div class="center">
+        <p id="text">
+         we're not just in the business of space travel, we're in the business of shaping the future. Founded on the principles of innovation, exploration, and a relentless pursuit of the unknown, we're here to redefine humanity's relationship with the cosmos.Ready to embark on the journey of a lifetime? Join us as we push the boundaries of possibility and chart a course toward a future among the stars. The universe awaits,will you answer the call?
+        </div>
+       
+<section>
+    
+</section>
+
+        <!-- footer starts -->
+   <div class="spacex">
+    <img class="sx" src="SpaceX-White-Logo.wine.png" alt="">
+  </div>
+<footer>
+    <div class="footer">
+    
+     <div class="footernav">
+       <ul>
+         <li><a href="index.html">HOME</a></li>
+         <li><a href="index.html">DESTINATIONS</a></li>
+         <li><a href="spaceship.html">SPACESHIPS</a></li>
+         <li><a href="about.html">ABOUT US</a></li>
+         <li><a href="testimonial.html">TESTIMONIALS</a></li>
+       </ul>
+     </div>
+    </div>
+   </footer>
+   <div class="footerbottom">
+     <P>Copyright &copy;2024; designed by <span class="designer">fahmida</span></P>
+   </div>
+
+
+
+
+  <script>
+     var text = document.getElementById('text');
+        var newDom = '';
+        var animationDelay = 6;
+
+        for(let i = 0; i < text.innerText.length; i++)
+        {
+            newDom += '<span class="char">' + (text.innerText[i] == ' ' ? '&nbsp;' : text.innerText[i])+ '</span>';
+        }
+
+        text.innerHTML = newDom;
+        var length = text.children.length;
+
+        for(let i = 0; i < length; i++)
+        {
+            text.children[i].style['animation-delay'] = animationDelay * i + 'ms';
+        }
+        
+  </script>
+</body>
+</html>
